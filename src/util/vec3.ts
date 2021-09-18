@@ -9,14 +9,14 @@ export class vec3{
         this.z=z;
     }
 
-    public get length(): number{
+    public get magnitude(): number{
         return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
     }
-    public static length(v: vec3): number{
+    public static magnitude(v: vec3): number{
         return Math.sqrt(v.x*v.x+v.y*v.y+v.z*v.z);
     }
     public get normalize(): vec3{
-        var m: number = this.length;
+        var m: number = this.magnitude;
         return new vec3(
             this.x/m,
             this.y/m,
@@ -25,7 +25,7 @@ export class vec3{
     }
 
     public static normalize(v: vec3): vec3{
-        var m: number = v.length;
+        var m: number = v.magnitude;
         return new vec3(
             v.x/m,
             v.y/m,
@@ -75,7 +75,7 @@ export class vec3{
             a.z+b.z
         );
     }
-    public static add(a: vec3, b: number):vec3{
+    public static addNum(a: vec3, b: number):vec3{
         return new vec3(
             a.x+b,
             a.y+b,
@@ -89,7 +89,7 @@ export class vec3{
             a.z-b.z
         );
     }
-    public static sub(a: vec3, b: number):vec3{
+    public static subNum(a: vec3, b: number):vec3{
         return new vec3(
             a.x-b,
             a.y-b,
@@ -103,7 +103,7 @@ export class vec3{
             a.z*b.z
         );
     }
-    public static mult(a: vec3, b: number):vec3{
+    public static multNum(a: vec3, b: number):vec3{
         return new vec3(
             a.x*b,
             a.y*b,
@@ -117,7 +117,7 @@ export class vec3{
             a.z/b.z
         );
     }
-    public static div(a: vec3, b: number):vec3{
+    public static divNum(a: vec3, b: number):vec3{
         return new vec3(
             a.x/b,
             a.y/b,
