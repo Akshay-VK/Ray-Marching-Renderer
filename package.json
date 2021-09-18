@@ -1,0 +1,24 @@
+{
+  "name": "ray-marching-renderer",
+  "version": "1.0.0",
+  "description": "A 3d renderer using ray marching algorithms and signed distance functions using Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node out/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshay-VK/Ray-Marching-Renderer.git"
+  },
+  "author": "Akshay-VK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshay-VK/Ray-Marching-Renderer/issues"
+  },
+  "homepage": "https://github.com/Akshay-VK/Ray-Marching-Renderer#readme",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "typescript": "^4.4.3"
+  }
+}
