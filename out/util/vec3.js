@@ -7,6 +7,18 @@ class vec3 {
         this.y = y;
         this.z = z;
     }
+    static from(a) {
+        return new vec3(a, a, a);
+    }
+    static fromXYZ(x, y, z) {
+        return new vec3(x, y, z);
+    }
+    static get ZERO() {
+        return new vec3(0, 0, 0);
+    }
+    static get ONE() {
+        return new vec3(1, 1, 1);
+    }
     get magnitude() {
         return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
     }

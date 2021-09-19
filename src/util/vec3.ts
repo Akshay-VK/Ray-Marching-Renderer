@@ -8,6 +8,19 @@ export class vec3{
         this.y=y;
         this.z=z;
     }
+    public static from(a: number): vec3{
+        return new vec3(a,a,a);
+    }
+    public static fromXYZ(x: number, y: number, z: number): vec3{
+        return new vec3(x,y,z);
+    }
+    public static get ZERO(): vec3{
+        return new vec3(0,0,0);
+    }
+    public static get ONE(): vec3{
+        return new vec3(1,1,1);
+    }
+    
 
     public get magnitude(): number{
         return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
