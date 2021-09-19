@@ -2,6 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const vec3_1 = require("./util/vec3");
 const sphere_1 = require("./world/obj/sphere");
-var a = vec3_1.vec3.ZERO;
-var s = new sphere_1.sphere(vec3_1.vec3.fromXYZ(3, 4, 0), 1);
-console.log(s.dist(a));
+const ray_1 = require("./world/ray");
+const scene_1 = require("./world/scene");
+var r = new ray_1.ray(vec3_1.vec3.ZERO, vec3_1.vec3.fromXYZ(-1, 0, 0));
+var scn = new scene_1.scene();
+var s = new sphere_1.sphere(vec3_1.vec3.fromXYZ(3, 0, 0), 1);
+scn.add_object(s);
+var s2 = new sphere_1.sphere(vec3_1.vec3.fromXYZ(-3, 0, 0), 2);
+scn.add_object(s2);
+console.log(r.cast(scn, 20, 0.00001, 10000));
